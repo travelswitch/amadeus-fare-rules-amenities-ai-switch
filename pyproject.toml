@@ -1,7 +1,7 @@
 [project]
 name = "amadeus-fare-rules-amenities-ai-switch"
 version = "1.0.0"
-description = "Amadeus Fare Rules & Amenities AI Switch: open-source API that turns Amadeus NDC fare rules and fare-family amenities into traveller-friendly summaries, amenity cards, fare names and Q&A chat with your own LLM."
+description = "Amadeus NDC Fare Rules & Amenities AI Switch: open-source API that turns Amadeus NDC fare rules and fare-family amenities into traveller-friendly summaries, amenity cards, fare names and Q&A chat with your own LLM."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.11"

@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------
-# Amadeus Fare Rules & Amenities AI Switch - one-command stack: API + admin UI, Postgres, Redis.
+# Amadeus NDC Fare Rules & Amenities AI Switch - one-command stack: API + admin UI, Postgres, Redis.
 #
 #   cp .env.example .env      # optional, defaults work out of the box
 #   docker compose up -d

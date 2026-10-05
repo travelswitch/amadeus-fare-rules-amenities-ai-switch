@@ -1,4 +1,4 @@
-<h1 align="center">Amadeus Fare Rules & Amenities AI Switch</h1>
+<h1 align="center">Amadeus NDC Fare Rules & Amenities AI Switch</h1>
 
 <p align="center"><strong>Amadeus NDC fare rules and amenities, explained.</strong> · <a href="https://travelswitch.github.io/amadeus-fare-rules-amenities-ai-switch/">Website</a> · <a href="docs/Amadeus-Fare-Rules-Amenities-AI-Switch-Guide.pdf">Guide (PDF)</a><br/>
 Self-hosted API + admin UI that turns the fare rules and fare-family amenity text from Amadeus NDC responses into traveller-friendly summaries, classified amenity cards and friendly fare names, and answers questions about them — using the LLM provider <em>you</em> choose.</p>
@@ -19,9 +19,9 @@ Self-hosted API + admin UI that turns the fare rules and fare-family amenity tex
 
 ## Why
 
-**Amadeus Fare Rules & Amenities AI Switch** is an open-source **fare rules and amenities API for Amadeus NDC**, built for OTAs, airlines, TMCs and travel-tech teams on Amadeus: it converts the raw fare rules, fare-family benefit lists and fare-family codes returned by Amadeus NDC into plain-language, multilingual summaries, classified amenity cards, friendly fare names and a Q&A chat about cancellation, change, refund and no-show penalties, using your own LLM (OpenAI, Azure OpenAI, Anthropic Claude, Google Gemini, Groq, AWS Bedrock).
+**Amadeus NDC Fare Rules & Amenities AI Switch** is an open-source **fare rules and amenities API for Amadeus NDC**, built for OTAs, airlines, TMCs and travel-tech teams on Amadeus: it converts the raw fare rules, fare-family benefit lists and fare-family codes returned by Amadeus NDC into plain-language, multilingual summaries, classified amenity cards, friendly fare names and a Q&A chat about cancellation, change, refund and no-show penalties, using your own LLM (OpenAI, Azure OpenAI, Anthropic Claude, Google Gemini, Groq, AWS Bedrock).
 
-Airline fare rules are long, uppercase, telegraphic and full of ATPCO jargon (`NON-REF`, `RFND`, `CHG PEN`, `NOSHOW`…). Travellers just want to know *"what does it cost me to cancel or change?"*. Amadeus Fare Rules & Amenities AI Switch answers that in plain language, in the traveller's language, on desktop or mobile — and caches the result so repeated fare rules cost zero tokens.
+Airline fare rules are long, uppercase, telegraphic and full of ATPCO jargon (`NON-REF`, `RFND`, `CHG PEN`, `NOSHOW`…). Travellers just want to know *"what does it cost me to cancel or change?"*. Amadeus NDC Fare Rules & Amenities AI Switch answers that in plain language, in the traveller's language, on desktop or mobile — and caches the result so repeated fare rules cost zero tokens.
 
 ### The problem this solves (Amadeus NDC integrators)
 
@@ -32,7 +32,7 @@ If you consume airline content through Amadeus NDC, you will have hit this:
 - **The text is often long and inconsistent**, with duplicated benefit lines, embedded conditions or URLs, which makes it unusable in a B2C booking flow.
 - **This is by design.** When raised with Amadeus, the position is that the behaviour is compliant with the NDC standard, so the integrator has to solve it.
 
-Amadeus Fare Rules & Amenities AI Switch is that solution for both halves of the fare-family payload. Feed it whatever Amadeus returned and get back a consistent, short, structured summary of the rules, a de-duplicated and classified amenity list, a friendly fare-family name, plus a Q&A channel for the follow-up questions travellers actually ask.
+Amadeus NDC Fare Rules & Amenities AI Switch is that solution for both halves of the fare-family payload. Feed it whatever Amadeus returned and get back a consistent, short, structured summary of the rules, a de-duplicated and classified amenity list, a friendly fare-family name, plus a Q&A channel for the follow-up questions travellers actually ask.
 
 ## What you get
 
@@ -238,7 +238,7 @@ Credentials are Fernet-encrypted with `APP_SECRET_KEY`. The public API never see
 
 ### Your own Postgres / Redis
 
-**Data stores** lets you point Amadeus Fare Rules & Amenities AI Switch at an existing Postgres and/or Redis with plain host/port/user/password fields (or a pasted DSN). It tests the connection, creates the schema, copies users, LLM config and API keys if the target is empty, and switches live — no restart. Redis is optional: without it, summaries are cached in Postgres only and chat context lives in memory (single instance).
+**Data stores** lets you point Amadeus NDC Fare Rules & Amenities AI Switch at an existing Postgres and/or Redis with plain host/port/user/password fields (or a pasted DSN). It tests the connection, creates the schema, copies users, LLM config and API keys if the target is empty, and switches live — no restart. Redis is optional: without it, summaries are cached in Postgres only and chat context lives in memory (single instance).
 
 <p align="center"><img src="docs/screenshots/08-data-stores.png" alt="Data stores" width="900" /></p>
 
@@ -254,7 +254,7 @@ All prompts, including the amenities and fare-name ones, can be edited from the 
 
 ```mermaid
 flowchart LR
-    C[Your app] -- X-API-Key --> A[Amadeus Fare Rules & Amenities AI Switch API]
+    C[Your app] -- X-API-Key --> A[Amadeus NDC Fare Rules & Amenities AI Switch API]
     A --> N[Normalise text\nSHA-256 digest]
     N --> R{Redis?}
     R -- hit --> C

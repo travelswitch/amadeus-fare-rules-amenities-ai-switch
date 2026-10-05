@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 # ---------------------------------------------------------------------------
-# Amadeus Fare Rules & Amenities AI Switch - production image
+# Amadeus NDC Fare Rules & Amenities AI Switch - production image
 # Multi-stage: build wheels in a full image, run in a slim one as non-root.
 # ---------------------------------------------------------------------------
 FROM python:3.12-slim AS builder

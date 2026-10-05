@@ -1,4 +1,4 @@
-/* Amadeus Fare Rules & Amenities AI Switch admin UI. Vanilla JS, no build step. */
+/* Amadeus NDC Fare Rules & Amenities AI Switch admin UI. Vanilla JS, no build step. */
 (() => {
   "use strict";
 
@@ -866,7 +866,7 @@ curl -X POST ${esc(base)}/api/v1/amenities/summary \\
       };
       if (body.postgres_mode === "external" && (!readForm(pgForm).host && !readForm(pgForm).dsn_override)) { toast("Postgres host is required", "error"); return; }
       if (body.postgres_mode !== pg.mode || (body.postgres_mode === "external" && body.postgres_dsn !== pg.external_dsn_full)) {
-        const ok = await confirmDialog("Switch PostgreSQL?", "Amadeus Fare Rules & Amenities AI Switch will connect to the target, create the schema and copy users, LLM configuration and API keys if it is empty. Usage history and cached summaries stay in the old database.", "Switch");
+        const ok = await confirmDialog("Switch PostgreSQL?", "Amadeus NDC Fare Rules & Amenities AI Switch will connect to the target, create the schema and copy users, LLM configuration and API keys if it is empty. Usage history and cached summaries stay in the old database.", "Switch");
         if (!ok) return;
       }
       try {

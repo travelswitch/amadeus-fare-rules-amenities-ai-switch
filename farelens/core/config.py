@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     )
 
     # --- Application -------------------------------------------------------
-    app_name: str = Field(default="Amadeus Fare Rules & Amenities AI Switch", alias="APP_NAME")
+    app_name: str = Field(default="Amadeus NDC Fare Rules & Amenities AI Switch", alias="APP_NAME")
     app_env: Literal["production", "development"] = Field(default="production", alias="APP_ENV")
     log_level: str = Field(default="INFO", alias="LOG_LEVEL")
     host: str = Field(default="0.0.0.0", alias="HOST")

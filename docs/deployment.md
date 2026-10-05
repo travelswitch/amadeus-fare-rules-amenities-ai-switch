@@ -1,6 +1,6 @@
-# Deploying Amadeus Fare Rules & Amenities AI Switch
+# Deploying Amadeus NDC Fare Rules & Amenities AI Switch
 
-Amadeus Fare Rules & Amenities AI Switch is a single container plus Postgres and Redis. The bundled `docker-compose.yml` is production-ready for a single host; this page covers what to change before exposing it, and how to run it on your own infrastructure.
+Amadeus NDC Fare Rules & Amenities AI Switch is a single container plus Postgres and Redis. The bundled `docker-compose.yml` is production-ready for a single host; this page covers what to change before exposing it, and how to run it on your own infrastructure.
 
 ## 1. Before going live (checklist)
 
@@ -15,7 +15,7 @@ Amadeus Fare Rules & Amenities AI Switch is a single container plus Postgres and
 
 ## 2. Reverse proxy (TLS)
 
-Amadeus Fare Rules & Amenities AI Switch listens on plain HTTP on port 8000 and honours `X-Forwarded-*` headers (`--proxy-headers` is on). Put any TLS terminator in front of it.
+Amadeus NDC Fare Rules & Amenities AI Switch listens on plain HTTP on port 8000 and honours `X-Forwarded-*` headers (`--proxy-headers` is on). Put any TLS terminator in front of it.
 
 **Caddy** (automatic certificates):
 
@@ -47,7 +47,7 @@ server {
 }
 ```
 
-> SSE needs response buffering **off** on every proxy in the path (nginx, Cloudflare, load balancers). Amadeus Fare Rules & Amenities AI Switch already sends `X-Accel-Buffering: no` and `Cache-Control: no-cache`.
+> SSE needs response buffering **off** on every proxy in the path (nginx, Cloudflare, load balancers). Amadeus NDC Fare Rules & Amenities AI Switch already sends `X-Accel-Buffering: no` and `Cache-Control: no-cache`.
 
 ## 3. Running with your own Postgres / Redis
 

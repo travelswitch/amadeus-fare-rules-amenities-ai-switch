@@ -1,4 +1,4 @@
-# Contributing to Amadeus Fare Rules & Amenities AI Switch
+# Contributing to Amadeus NDC Fare Rules & Amenities AI Switch
 
 Thanks for your interest! Issues and pull requests are welcome.
 

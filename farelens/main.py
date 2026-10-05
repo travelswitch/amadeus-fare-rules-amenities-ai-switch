@@ -1,4 +1,4 @@
-"""Amadeus Fare Rules & Amenities AI Switch application factory."""
+"""Amadeus NDC Fare Rules & Amenities AI Switch application factory."""
 
 from __future__ import annotations
 
@@ -38,7 +38,7 @@ from farelens.services.users import UserService
 logger = logging.getLogger(__name__)
 
 API_DESCRIPTION = """
-**Amadeus Fare Rules & Amenities AI Switch** turns the fare rules and fare-family amenities from Amadeus NDC responses into
+**Amadeus NDC Fare Rules & Amenities AI Switch** turns the fare rules and fare-family amenities from Amadeus NDC responses into
 traveller-friendly summaries, classified amenity lists and friendly fare names, and answers
 questions about them, using the LLM provider you configure (OpenAI, Azure OpenAI, Anthropic, Google Gemini, Groq or AWS Bedrock).
 

@@ -1,4 +1,4 @@
--- Amadeus Fare Rules & Amenities AI Switch initial schema.
+-- Amadeus NDC Fare Rules & Amenities AI Switch initial schema.
 -- Applied automatically at startup by farelens.db.migrations (idempotent).
 
 CREATE TABLE IF NOT EXISTS users (

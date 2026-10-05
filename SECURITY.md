@@ -13,7 +13,7 @@ Please do **not** open a public issue for security problems. Email the maintaine
 - Keep Postgres/Redis on a private network; the compose file does not publish their ports by default.
 - Treat API keys like passwords: they are shown once and stored as SHA-256 hashes.
 
-## What Amadeus Fare Rules & Amenities AI Switch stores
+## What Amadeus NDC Fare Rules & Amenities AI Switch stores
 
 | Data | Where | Protection |
 |---|---|---|
